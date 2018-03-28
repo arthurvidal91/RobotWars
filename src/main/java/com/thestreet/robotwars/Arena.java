@@ -1,6 +1,6 @@
 package com.thestreet.robotwars;
 
-public class RobotWars {
+public class Arena {
 
 	private Robot robot;
 

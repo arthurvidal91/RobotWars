@@ -5,13 +5,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import com.thestreet.robotwars.Robot;
-import com.thestreet.robotwars.RobotWars;
+import com.thestreet.robotwars.Arena;
 
 public class RobotWarsTest {
 
 	@Test
 	public void testScenario1() {
-		RobotWars game = new RobotWars();
+		Arena game = new Arena();
 		Robot player1 = new Robot(0, 2, 'E');
 		game.registerPlayer(player1);
 
@@ -19,7 +19,7 @@ public class RobotWarsTest {
 		for (char move : moves) {
 			game.play(move);
 		}
-		
+		System.out.println("testScenario1:" + player1.reportPosition());
 		assertEquals(4, player1.getX());
 		assertEquals(1, player1.getY());
 		assertEquals('N', player1.getHeading().getCode());
@@ -28,7 +28,7 @@ public class RobotWarsTest {
 
 	@Test
 	public void testScenario2() {
-		RobotWars game = new RobotWars();
+		Arena game = new Arena();
 		Robot player1 = new Robot(4, 4, 'S');
 		game.registerPlayer(player1); 
 
@@ -36,7 +36,7 @@ public class RobotWarsTest {
 		for (char move : moves) {
 			game.play(move);
 		}
-		
+		System.out.println("testScenario2:" + player1.reportPosition());		
 		assertEquals(0, player1.getX());
 		assertEquals(1, player1.getY());
 		assertEquals('W', player1.getHeading().getCode());
@@ -46,7 +46,7 @@ public class RobotWarsTest {
 
 	@Test
 	public void testScenario3() {
-		RobotWars game = new RobotWars();
+		Arena game = new Arena();
 		Robot player1 = new Robot(2, 2, 'W');
 		game.registerPlayer(player1);
 
@@ -54,7 +54,7 @@ public class RobotWarsTest {
 		for (char move : moves) {
 			game.play(move);
 		}
-
+		System.out.println("testScenario3:" + player1.reportPosition());
 		assertEquals(2, player1.getX());
 		assertEquals(2, player1.getY());
 		assertEquals('N', player1.getHeading().getCode());
@@ -63,7 +63,7 @@ public class RobotWarsTest {
 
 	@Test
 	public void testScenario4() {
-		RobotWars game = new RobotWars();
+		Arena game = new Arena();
 		Robot player1 = new Robot(1, 3, 'N');
 		game.registerPlayer(player1);
 
@@ -71,7 +71,7 @@ public class RobotWarsTest {
 		for (char move : moves) {
 			game.play(move);
 		}
-
+		System.out.println("testScenario4:" + player1.reportPosition());
 		assertEquals(0, player1.getX());
 		assertEquals(0, player1.getY());
 		assertEquals('S', player1.getHeading().getCode());

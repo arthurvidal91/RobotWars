@@ -38,7 +38,7 @@ public class Robot {
 			makeMove();
 			break;
 		}
-		
+
 		default: {
 			throw new IllegalArgumentException("Invalid Move");
 		}
@@ -177,6 +177,13 @@ public class Robot {
 
 	public void setPenalties(int penalties) {
 		this.penalties = penalties;
+	}
+
+	public String reportPosition() {
+		return String.format("X = %d, Y = %d, H = %s, Penalties = %d", this.getX(), 
+																	   this.getY(), 
+																	   this.getHeading(),
+																	   this.getPenalties());
 	}
 
 }
