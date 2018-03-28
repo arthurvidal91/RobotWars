@@ -38,6 +38,9 @@ public class Robot {
 			makeMove();
 			break;
 		}
+		case ' ':{
+			break;
+		}
 
 		default: {
 			throw new IllegalArgumentException("Invalid Move");
